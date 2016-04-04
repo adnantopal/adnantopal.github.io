@@ -1,0 +1,23 @@
+{
+  "name": "adnantopal.github.io",
+  "version": "1.0.0",
+  "description": "Adnan Topal personal site and blog.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnantopal/adnantopal.github.io.git"
+  },
+  "author": "Adnan Topal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adnantopal/adnantopal.github.io/issues"
+  },
+  "homepage": "https://github.com/adnantopal/adnantopal.github.io#readme",
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.1"
+  }
+}

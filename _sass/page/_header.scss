@@ -1,0 +1,27 @@
+////////////////////////////////////////////////
+// HEADER
+////////////////////////////////////////////////
+
+.SiteHeader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  color: #666;
+  @include font("sans");
+  line-height: 1;
+  background: rgba(white, 0.9);
+}
+
+.SiteLogo {
+  font-weight: 300;
+
+  svg {
+    transform: translate3d(0, -0.025em, 0);
+  }
+}
