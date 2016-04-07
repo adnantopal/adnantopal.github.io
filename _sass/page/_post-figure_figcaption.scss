@@ -2,7 +2,7 @@
 
 figcaption {
   margin-top: 8px;
-  @include font("sans");
+  @include font("sans", "light");
   font-size: 14px;
   line-height: 1.4;
   text-align: center;
