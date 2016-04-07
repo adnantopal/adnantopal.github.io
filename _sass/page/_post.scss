@@ -21,3 +21,10 @@
   }
 
 }
+
+.PostBody {
+
+  a {
+    @include link;
+  }
+}

@@ -13,16 +13,16 @@
 @mixin font($style: "serif", $weight: "normal") {
 
   @if ($style == "sans") {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-sans-family;
     @if ($weight == "light") {
       font-weight: 300;
     } @else if ($weight == "normal") {
       font-weight: 400;
     } @else if ($weight == "bold") {
-      font-weight: 500;
+      font-weight: 700;
     }
   } @else if ($style == "serif") {
-    font-family: 'PT Serif', serif;
+    font-family: $font-serif-family;
     @if ($weight == "light") {
       font-weight: 400;
     } @else if ($weight == "normal") {
@@ -31,7 +31,7 @@
       font-weight: 700;
     }
   } @else if ($style == "title") {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: $font-title-family;
     @if ($weight == "light") {
       font-weight: 700;
     } @else if ($weight == "normal") {
@@ -40,7 +40,7 @@
       font-weight: 700;
     }
   } @else if ($style == "mono") {
-    font-family: 'Roboto Mono', 'Menlo', Consolas, Monaco, 'Ubuntu Mono', monospace;
+    font-family: $font-mono-family;
     @if ($weight == "light") {
       font-weight: 400;
     } @else if ($weight == "normal") {

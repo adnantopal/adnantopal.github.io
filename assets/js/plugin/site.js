@@ -1,4 +1,6 @@
 (function ($) {
+    "use strict";
+    
     $(function () {
         var texts = [];
 
@@ -17,6 +19,12 @@
             }
         }, {
             offset: '35%'
+        });
+        
+        $(document.body).on('click', '.NavToggle', function(e) {
+            e.preventDefault();
+            
+            $(document.body).toggleClass('NavOpen');
         });
     });
 }(jQuery));

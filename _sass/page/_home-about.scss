@@ -16,6 +16,7 @@
     @include font("sans", "light");
     font-size: 22px;
     line-height: 1.44;
+    letter-spacing: -1.5px;
     @include device {
       margin-right: 0;
       font-size: 30px;
@@ -40,7 +41,7 @@
 
   }
 
-  &_follow {
+  &_social {
     margin-top: 50px;
 
     &:before {
@@ -50,6 +51,43 @@
       width: 30px;
       height: 1px;
       background-color: $color-smoke;
+    }
+  }
+
+  &_social_buttons {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+
+    a {
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      height: 28px;
+      margin-right: 10px;
+      padding: 0 10px;
+      color: #fff;
+      @include font("sans", "light");
+      font-size: 12px;
+      line-height: 28px;
+      letter-spacing: -0.25px;
+      cursor: pointer;
+      background-color: #333;
+      border-radius: 3px;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #999999;
+        text-decoration: none;
+      }
+    }
+
+    .icon {
+      width: 1.5em;
+      height: 1.6em;
+      margin-right: 0.5em;
     }
   }
 

@@ -2,9 +2,10 @@
 <html>
 {% include head.html %}
 <body>
+{% include header.html %}
+
 <main class="SiteContent" role="main">
-    {% include home-about.html %}
-    {% include home-archive.html %}
+    {{ content }}
 </main>
 
 {% include footer.html %}

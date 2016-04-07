@@ -3,7 +3,7 @@ $margin-typography-element: 1.5em;
 $transition: .2s;
 
 // COLOR
-$theme-color: #39b5de;
+$theme-color: #3A6EE8;
 $color-smoke: #eee;
 $color-shadow: #ccc;
 $color-light: #999;
@@ -13,11 +13,10 @@ $color-text: #222;
 $fonts-size: 16px;
 $fonts-size--desktop: 18px;
 $fonts-size--cinema: 20px;
-$font-title-text: "Roboto+Condensed:700"; // 300, 400, 700
-$font-sans-text: "Roboto:300,400,500"; // 100, 300, 400, 500, 700, 900
-$font-serif-text: "PT+Serif:400,400italic,700,700italic"; // 400, 700
-$font-mono-text: "Roboto+Mono:400,700"; // 100, 300, 400, 500, 700
-$font-url: "https://fonts.googleapis.com/css?family=" + $font-title-text + "|" + $font-sans-text +"|" + $font-serif-text + "|" + $font-mono-text + "&subset=latin,latin-ext";
+$font-title-family: 'Montserrat', sans-serif;
+$font-sans-family: 'Montserrat', sans-serif;
+$font-serif-family: 'Merriweather', sans-serif;
+$font-mono-family: 'Source Code Pro', 'Menlo', Consolas, Monaco, 'Ubuntu Mono', monospace;
 
 // SKELETON
 $offset-padding: 15px;

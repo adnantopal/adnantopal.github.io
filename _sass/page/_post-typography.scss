@@ -3,7 +3,6 @@
   // LINK //////////////////
 
   a {
-    text-decoration: underline;
 
     &:hover {
       color: $theme-color;
@@ -61,6 +60,7 @@
     @include device {
       color: #888;
       font-size: 26px;
+      font-weight: 200;
     }
   }
 

@@ -3,20 +3,8 @@
 {% include head.html %}
 <body>
 {% include svg-icons.html %}
-<header class="SiteHeader" role="banner">
 
-    <div class="SiteLogo">
-        <a href="{{ site.url }}" rel="home">
-            <svg class="icon icon-twitter-like">
-                <use xlink:href="#icon-chevron-left"></use>
-            </svg>
-            <span>Back to home</span>
-        </a>
-    </div>
-
-    <div class="ActiveSection">{{ page.title }}</div>
-
-</header>
+{% include header.html %}
 
 <main class="SiteContent" role="main">
     <article class="Post" itemscope itemtype="http://schema.org/BlogPosting">

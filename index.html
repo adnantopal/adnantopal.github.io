@@ -1,23 +1,70 @@
 ---
 layout: default
 ---
+{% include svg-icons.html %}
 
-<div class="home">
+<section class="Section About">
+    <div class="width">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <h2 class="About_title">
+            <strong>Adnan Topal</strong> is a <strong>Front-End Developer</strong> who is currently focused on <strong>hybrid mobile development</strong>,
+            and based in <strong>Antalya, Turkey</strong>.
         </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <p class="About_info">
+            Feel free to read my <a href="" title="Writing">blog posts</a>, send me an <a
+                href="mailto:adnan@adnan.co" title="Send me an email">email</a> or see my <a href="#">projects</a>.
+        </p>
 
-</div>
+        <div class="About_social">
+            <div class="About_social_buttons">
+                <!--<a target="_blank"
+                   href="https://twitter.com/adnantopal"
+                   rel="external nofollow"
+                   title="Follow @adnantopal"
+                   class="twitter-follow-button"
+                   data-size="large"
+                   data-show-count="false"
+                   data-show-screen-name="true">
+                    Follow @adnantopal
+                </a>-->
+                <a href="https://twitter.com/adnantopal">
+                    <svg class="icon icon-twitter">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                    <span>Follow Me</span>
+                </a>
+                <a href="https://github.com/adnantopal">
+                    <svg class="icon icon-github">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- /.Section.About -->
+<section class="Section Writing">
+    <div class="width">
+        {% for post in site.posts %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <ul class="ArchiveList" data-archive-year="{{ currentdate }}">
+            {% assign date = currentdate %}
+            {% endif %}
+            <li class="Archive">
+                <a class="Archive-link" href="{{ post.url }}">
+                    <time class="Archive_date">{{post.date | date: "%b %-d"}}</time>
+                    <h3 class="Archive_title">{{ post.title }}</h3>
+                </a>
+            </li>
+            {% if forloop.last %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<!-- /.Section.Writing -->

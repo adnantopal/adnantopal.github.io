@@ -1,0 +1,53 @@
+---
+layout: default
+title: All Blog Posts
+---
+
+<section class="Section About">
+    <div class="width">
+
+        <h2 class="About_title">
+            <strong>All blog posts I've written so far.</strong>
+        </h2>
+
+    </div>
+</section>
+<!-- /.Section.About -->
+
+<section class="Section Writing">
+    <div class="width">
+        {% for post in paginator.posts %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <ul class="ArchiveList" data-archive-year="{{ currentdate }}">
+            {% assign date = currentdate %}
+            {% endif %}
+            <li class="Archive">
+                <a class="Archive-link" href="{{ post.url }}">
+                    <time class="Archive_date">{{post.date | date: "%b %-d"}}</time>
+                    <h3 class="Archive_title">{{ post.title }}</h3>
+                </a>
+            </li>
+            {% if forloop.last %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<!-- /.Section.Writing -->
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% else %}
+    <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+    <span class="next ">Next</span>
+    {% endif %}
+</div>
+<!-- Pagination links -->
