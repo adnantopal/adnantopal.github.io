@@ -1,0 +1,18 @@
+.SiteFooter {
+  padding: 40px 0;
+  color: #666;
+  @include font("sans");
+  font-size: 14px;
+  text-align: center;
+  background: #F5F5F5;
+
+  a {
+    color: #333333;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $theme-color;
+      text-decoration: none;
+    }
+  }
+}

@@ -7,6 +7,10 @@
     @media only screen and (min-width: $container-width--outer-p) {
       @content;
     }
+  } @else if ($screen == "phone") {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
   }
 }
 

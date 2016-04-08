@@ -79,7 +79,7 @@
       transition: background-color 0.2s ease-in-out;
 
       &:hover {
-        background-color: #999999;
+        background-color: $theme-color;
         text-decoration: none;
       }
     }
