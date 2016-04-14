@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////
 
 .Post {
-  margin-top: 140px;
+  padding-top: 140px;
   @include device("cinema") {
     font-size: $fonts-size--cinema;
   }
@@ -25,6 +25,7 @@
 .PostBody {
 
   a {
-    @include link;
+    color: $color-link;
+    @include link(4px, 94%);
   }
 }

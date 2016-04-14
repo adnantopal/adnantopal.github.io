@@ -1,5 +1,9 @@
 .SiteFooter {
-  padding: 40px 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 100px;
   color: #666;
   @include font("sans");
   font-size: 14px;

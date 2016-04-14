@@ -1,11 +1,63 @@
-(function ($) {
+(function( $ ) {
     "use strict";
-    
-    $(function () {
-        $(document.body).on('click', '.NavToggle', function(e) {
+
+    var siteData = JSON.parse( localStorage.getItem( 'adnanco' ) );
+
+    init();
+
+    function changeLanguage( lang ) {
+        if ( lang ) {
+            $( document.body ).attr( 'data-site-language', lang );
+            setData( 'language', lang );
+        } else {
+            $( document.body ).attr( 'data-site-language', getData( 'language' ) );
+        }
+    }
+
+    window.changeLang = changeLanguage;
+
+    function getLanguage() {
+        return window.navigator.languages.indexOf( 'tr' ) > -1 ? 'tr' : 'en';
+    }
+
+    function getData( key ) {
+        return siteData[ key ];
+    }
+
+    function setData( key, value ) {
+        if ( !siteData ) {
+            siteData = {
+                'language': getLanguage()
+            };
+            localStorage.setItem( 'adnanco', JSON.stringify( siteData ) );
+            return;
+        } else if ( !key ) {
+            return;
+        }
+
+        siteData[ key ] = value;
+        localStorage.setItem( 'adnanco', JSON.stringify( siteData ) );
+    }
+
+    function init() {
+        setData();
+        changeLanguage();
+    }
+
+    $( function() {
+        $( '.NavToggle' ).on( 'click', function( e ) {
             e.preventDefault();
-            
-            $(document.body).toggleClass('NavOpen');
-        });
-    });
-}(jQuery));
+
+            $( document.body ).toggleClass( 'NavOpen' );
+        } );
+
+        $( '.SiteLanguage' ).on( 'click', 'a', function( e ) {
+            e.preventDefault();
+            var $this = $( this ),
+                activeLang = $this.data( 'active-lang' );
+
+            $this.parent().addClass( 'active' ).siblings().removeClass( 'active' );
+            changeLanguage( activeLang );
+        } );
+    } );
+}( jQuery ));

@@ -36,7 +36,11 @@ site_pages:
     url: "/contact/"
 
 # Build settings
-markdown: kramdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
 permalink: /:title/
 
 sass:

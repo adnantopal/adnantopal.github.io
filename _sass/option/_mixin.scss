@@ -56,11 +56,11 @@
 
 }
 
-@mixin link() {
+@mixin link($size: 2px, $position: 92%) {
   text-decoration: none;
-  background-image: linear-gradient(to bottom, transparent 50%, currentColor 50%);
-  background-size: auto 2px;
-  background-position: 0 92%;
+  background-image: linear-gradient(to bottom, transparent 50%, #cccccc 50%);
+  background-size: auto $size;
+  background-position: 0 $position;
   background-repeat: repeat-x;
   text-shadow: 1px 0 white, -1px 0 white, 2px 0 white, -2px 0 white;
 

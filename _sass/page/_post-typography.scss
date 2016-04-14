@@ -94,6 +94,7 @@ pre, :not(pre) > code, kbd {
 }
 
 pre {
+  margin-top: $offset-padding;
   padding: 20px 0;
   border: dashed $color-shadow;
   border-width: 1px 0;
@@ -103,7 +104,7 @@ pre {
 }
 
 :not(pre) > code {
-  padding: 1px 4px 3px;
+  padding: 3px 4px;
   border-radius: 2px;
   white-space: normal;
   background: $color-smoke;

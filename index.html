@@ -5,45 +5,48 @@ layout: default
 <section class="Section About">
     <div class="width">
 
-        <h2 class="About_title">
+        <h2 class="About_title" data-display-lang="en">
             <strong>Adnan Topal</strong> is a <strong>Front-End Developer</strong> who is currently focused on <strong>hybrid mobile development</strong>,
             and based in <strong>Antalya, Turkey</strong>.
         </h2>
+        <h2 class="About_title" data-display-lang="tr">
+            <strong>Adnan Topal</strong>, hayatını <strong>Antalya</strong>'da sürdüren, ve son zamanlarda <strong>hibrit mobil uygulama</strong>
+            teknolojilerine yoğunlaşmış olan bir <strong>Arayüz Geliştirici</strong>dir.
+        </h2>
 
-        <p class="About_info">
-            Feel free to read my <a href="{{ site.url }}/blog/" title="Writing">blog posts</a>, see my <a href="#">projects</a> or send me an
-            <a href="mailto:adnan@adnan.co" title="Send me an email">email</a>.
+        <p class="About_info" data-display-lang="en">
+            Feel free to read my <a href="{{ site.url }}/blog/" title="Articles">blog posts</a>, see my <a href="#" class="Works">projects</a>,
+            send me an <a href="mailto:adnan@adnan.co" title="Send me an email">e-mail</a> or get to know more
+            <a href="{{ site.url }}/about/" title="About me">about me</a>.
+        </p>
+        <p class="About_info" data-display-lang="tr">
+            İsterseniz <a href="{{ site.url }}/blog/" title="Articles">blog yazılarımı</a> okuyabilir, tamamladığım
+            <a href="#" class="Works">projeleri</a> görebilir, bana <a href="mailto:adnan@adnan.co" title="Send me an email">e-posta</a>
+            gönderebilir veya <a href="{{ site.url }}/about/" title="About me">hakkımda</a> daha fazla bilgi edinebilirsiniz.
         </p>
 
         <div class="About_social">
             <div class="About_social_buttons">
-                <!--<a target="_blank"
-                   href="https://twitter.com/adnantopal"
-                   rel="external nofollow"
-                   title="Follow @adnantopal"
-                   class="twitter-follow-button"
-                   data-size="large"
-                   data-show-count="false"
-                   data-show-screen-name="true">
-                    Follow @adnantopal
-                </a>-->
                 <a href="https://twitter.com/adnantopal">
                     <svg class="icon icon-twitter">
                         <use xlink:href="#icon-twitter"></use>
                     </svg>
-                    <span>I Tweet About Stuff</span>
+                    <span data-display-lang="en">I Tweet About Stuff</span>
+                    <span data-display-lang="tr">Ara Sıra Tweet Atar</span>
                 </a>
                 <a href="https://github.com/adnantopal">
                     <svg class="icon icon-github">
                         <use xlink:href="#icon-github"></use>
                     </svg>
-                    <span>I Write Code</span>
+                    <span data-display-lang="en">I Write Code</span>
+                    <span data-display-lang="tr">Çokça Kod Yazar</span>
                 </a>
                 <a href="https://instagram.com/adnantopal">
                     <svg class="icon icon-instagram">
                         <use xlink:href="#icon-instagram"></use>
                     </svg>
-                    <span>I Love Cats</span>
+                    <span data-display-lang="en">I Love Cats</span>
+                    <span data-display-lang="tr">Kedileri Çok Severim</span>
                 </a>
             </div>
         </div>
@@ -53,7 +56,7 @@ layout: default
 <!-- /.Section.About -->
 <section class="Section Writing">
     <div class="width">
-        {% for post in site.posts %}
+        {% for post in site.posts limit:10 %}
         {% assign currentdate = post.date | date: "%Y" %}
         {% if currentdate != date %}
         {% unless forloop.first %}</ul>{% endunless %}
