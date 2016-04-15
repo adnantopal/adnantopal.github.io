@@ -9,7 +9,7 @@
   padding: 60px 0;
 
   @include device {
-    height: 80vh;
+    min-height: 80vh;
   }
 
   &_title {

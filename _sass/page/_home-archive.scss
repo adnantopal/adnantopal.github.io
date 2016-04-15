@@ -6,6 +6,30 @@
   margin-bottom: 100px;
 }
 
+.SelectLanguage {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  @include font("sans", "normal");
+
+  a {
+    display: block;
+    padding: 4px 8px;
+    color: #999;
+    font-size: 14px;
+
+    [data-site-language="en"] &[data-active-lang="en"] {
+      color: #444444;
+      background-color: #eeeeee;
+    }
+    [data-site-language="tr"] &[data-active-lang="tr"] {
+      color: #444444;
+      background-color: #eeeeee;
+    }
+  }
+}
+
 .Archive {
 
   &List {

@@ -1,0 +1,7 @@
+{
+  "name": "snotify",
+  "tagline": "Desktop Application",
+  "description": "SNotify gives your Spotify Windows Client two additional abilities: global hotkeys and toast notifications.",
+  "url": "https://github.com/adnantopal/snotify",
+  "image": "snotify.png"
+}

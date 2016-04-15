@@ -4,6 +4,7 @@ title: "Look! This Post Has Videos"
 date: 2015-11-29 15:01:00 +0200
 excerpt: I like sci-fi movies. A problem with sci-fi movies is that they happen in a vast fictional universe that I have no idea about. There’s a ton of stuff going on and only two hours of screen time to get me up to speed.
 categories: images
+language: en
 ---
 I used be a print designer, then web designer, then UI designer. Now I’m becoming a UX choreographer — great title to put on a resume. So here’s how that happened: I can’t code. What that really means is I can’t make my designs come to life. I’ve spent hours and hours explaining what happens when you push that button. I needed a better way to explain how interactions work, so I decided to start animating. 
 

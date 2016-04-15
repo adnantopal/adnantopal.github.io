@@ -52,17 +52,12 @@
     $( function() {
         $( '.NavToggle' ).on( 'click', function( e ) {
             e.preventDefault();
-
             $( document.body ).toggleClass( 'NavOpen' );
         } );
 
-        $( '.SiteLanguage' ).on( 'click', 'a', function( e ) {
+        $( '.SelectLanguage' ).on( 'click', 'a', function( e ) {
             e.preventDefault();
-            var $this = $( this ),
-                activeLang = $this.data( 'active-lang' );
-
-            $this.parent().addClass( 'active' ).siblings().removeClass( 'active' );
-            changeLanguage( activeLang );
+            changeLanguage( $( this ).data( 'active-lang' ) );
         } );
     } );
 }( jQuery ));

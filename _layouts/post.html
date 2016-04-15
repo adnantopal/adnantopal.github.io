@@ -9,7 +9,7 @@
 
         <header class="PostHeader">
             <section class="width">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B
                     %-d, %Y" }}
                 </time>
                 <span class="reading-time" title="Estimated read time">
@@ -17,15 +17,10 @@
                     {% if words < 360 %}
                     1 min read
                     {% else %}
-                    {{ words | divided_by:180 }} mins read
+                    {{ words | divided_by:180 }} <span data-display-lang="en">mins read</span><span data-display-lang="tr">dakikada okunur</span>
                     {% endif %}
                 </span>
             </section>
-            <!--<p class="post-meta">
-
-                {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
-                    itemprop="name">{{ page.author }}</span></span>{% endif %}
-            </p>-->
         </header>
 
         <div class="PostBody">

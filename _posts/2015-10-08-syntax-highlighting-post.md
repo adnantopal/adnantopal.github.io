@@ -4,6 +4,7 @@ title: "Syntax Highlighting Post"
 date: 2015-10-08 16:47:00 +0200
 excerpt: I've been dabbling with React for a few months now and using it in several small open source projects to better understand the technology. React's focus on reusablility, along with the ability to install and require components via npm, provides an elegant way to rapidly build application UI in an efficient and consistent way. It's also a great way to handle server-side rendering and provides high cohesion between markup and display logic.
 categories: code
+language: en
 ---
 ## Set up Webpack
 

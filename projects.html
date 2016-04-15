@@ -1,0 +1,27 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<h4>One of my passion is to tinker with different technologies while I'm not actively working on a non-personal project and contribute to open
+    source. All of the following are fruits of this passion.</h4>
+
+<div class="Projects">
+{% for project_hash in site.data.projects reversed %}
+{% assign project = project_hash[1] %}
+    <div class="Project">
+        <h2>{{ project.name }}</h2>
+        <p>{{ project.tagline }}</p>
+        <div class="ProjectInfo">
+            <div class="image">
+                <img src="{{ site.url }}/assets/project-images/{{ project.image }}" alt="{{ project.name }}">
+            </div>
+            <div class="info">
+                <div class="desc">{{ project.description }}</div>
+                <a href="{{ project.url }}" target="_blank">visit project</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>

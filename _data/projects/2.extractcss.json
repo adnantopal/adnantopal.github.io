@@ -1,0 +1,7 @@
+{
+  "name": "extractCSS",
+  "tagline": "JavaScript Library / Online Tool",
+  "description": "extractCSS is a JS library and hosted online tool that can extract id, class and inline styles from HTML document and output them as CSS stylesheet.",
+  "url": "https://github.com/adnantopal/extractcss",
+  "image": "extractcss.png"
+}
