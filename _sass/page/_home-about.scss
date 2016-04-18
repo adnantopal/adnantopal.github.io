@@ -11,6 +11,9 @@
   @include device {
     min-height: 80vh;
   }
+  @include device("phone") {
+    padding: 100px 0 60px;
+  }
 
   &_title {
     @include font("sans", "light");
@@ -60,6 +63,11 @@
     align-items: center;
     -webkit-align-items: center;
 
+    @include device("phone") {
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+    }
+
     a {
       display: flex;
       display: -webkit-flex;
@@ -77,6 +85,10 @@
       background-color: #333;
       border-radius: 3px;
       transition: background-color 0.2s ease-in-out;
+
+      @include device("phone") {
+        margin: 2px;
+      }
 
       &:hover {
         background-color: $theme-color;

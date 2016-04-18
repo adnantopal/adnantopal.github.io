@@ -19,6 +19,10 @@
   @include font("sans");
   line-height: 1;
   background: rgba(white, 0.75);
+
+  @include device("phone") {
+    padding: 20px 15px;
+  }
 }
 
 .SiteLogo {
@@ -48,6 +52,10 @@
   -webkit-flex-direction: row-reverse;
   align-items: center;
   -webkit-align-items: center;
+  @include device("phone") {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  }
 
   > a {
     position: relative;
@@ -108,14 +116,27 @@
     display: flex;
     display: -webkit-flex;
     margin-right: 20px;
+    @include device("phone") {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      margin-right: 0;
+      text-align: right;
+    }
 
     li {
-      margin: 0 20px;
+      padding: 0 20px;
       visibility: hidden;
       opacity: 0;
       transform: translate3d(30px, 0, 0);
       -webkit-transform: translate3d(40px, 0, 0);
       transition: visibility 0.3s ease-in-out, opacity 0.15s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+      @include device("phone") {
+        padding: 6px 20px;
+        background: rgba(white, 0.75);
+      }
 
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {

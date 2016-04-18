@@ -3,19 +3,31 @@ layout: default
 title: All Blog Posts
 ---
 
-<section class="Section About">
-    <div class="width">
+<section class="Post">
 
-        <h2 class="About_title">
-            <strong>All blog posts I've written so far.</strong>
-        </h2>
+    <div class="PostBody Blog">
+
+        <section class="width">
+            <h1 class="page-title">Blog</h1>
+        </section>
+        <!-- /.width -->
+
+        <section class="width">
+            <h4>It's great to share the experiences you've had while developing a project. Here I occasionally write blog posts about them.</h4>
+        </section>
+        <!-- /.width -->
 
     </div>
-</section>
-<!-- /.Section.About -->
+    <!-- /.PostBody -->
 
+</section>
+<!-- /.Section.Page -->
 <section class="Section Writing">
     <div class="width">
+        <ul class="SelectLanguage">
+            <li><a href="#" data-active-lang="en">English</a></li>
+            <li><a href="#" data-active-lang="tr">Turkish</a></li>
+        </ul>
         {% for post in paginator.posts %}
         {% assign currentdate = post.date | date: "%Y" %}
         {% if currentdate != date %}
@@ -23,11 +35,14 @@ title: All Blog Posts
         <ul class="ArchiveList" data-archive-year="{{ currentdate }}">
             {% assign date = currentdate %}
             {% endif %}
-            <li class="Archive">
+            <li class="Archive" data-display-lang="{{ post.language }}">
                 <a class="Archive-link" href="{{ post.url }}">
                     <time class="Archive_date">{{post.date | date: "%b %-d"}}</time>
                     <h3 class="Archive_title">{{ post.title }}</h3>
                 </a>
+                {% if post.excerpt %}
+                <p>{{ post.excerpt }}</p>
+                {% endif %}
             </li>
             {% if forloop.last %}
         </ul>
@@ -37,17 +52,19 @@ title: All Blog Posts
 </section>
 <!-- /.Section.Writing -->
 
-<div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-    {% else %}
-    <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% else %}
-    <span class="next ">Next</span>
-    {% endif %}
-</div>
+<section class="Pagination">
+    <div class="width">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% else %}
+        <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% else %}
+        <span class="next ">Next</span>
+        {% endif %}
+    </div>
+</section>
 <!-- Pagination links -->
