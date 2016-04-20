@@ -29,6 +29,11 @@
     @include link(4px, 94%);
   }
 
+  p,
+  li {
+    color: #333333;
+  }
+
   &.Blog {
     h4:first-of-type {
       margin-bottom: 60px;
@@ -41,5 +46,13 @@
 
   h4:first-of-type {
     margin-bottom: 60px;
+
+    strong {
+      font-weight: 300;
+    }
+  }
+
+  .about-image {
+    margin-top: -30px;
   }
 }
