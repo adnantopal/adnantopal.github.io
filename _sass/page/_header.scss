@@ -19,7 +19,17 @@
   @include font("sans");
   line-height: 1;
   background: rgba(white, 0.75);
+  transition: background 0.3s ease-in-out;
 
+  .NavOpen & {
+    @include device {
+      background: rgba(white, 0.75);
+    }
+  }
+
+  @include device {
+    background: transparent;
+  }
   @include device("phone") {
     padding: 20px 15px;
   }
@@ -118,7 +128,7 @@
     margin-right: 20px;
     @include device("phone") {
       position: absolute;
-      top: 60px;
+      top: 68px;
       right: 0;
       flex-direction: column;
       -webkit-flex-direction: column;

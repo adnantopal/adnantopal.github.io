@@ -12,10 +12,3 @@
 .SiteContent {
   min-height: calc(100vh - 100px);
 }
-
-.page-title {
-  &:after {
-    content: '.';
-    color: #999999;
-  }
-}

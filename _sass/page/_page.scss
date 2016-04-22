@@ -1,0 +1,49 @@
+.page-title {
+  &:after {
+    content: '.';
+    color: #999999;
+  }
+}
+
+.ContactForm {
+  label,
+  input,
+  textarea,
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 4px 8px;
+    color: $color-text;
+    background: #ffffff;
+    border: 1px solid #aaaaaa;
+
+    &:active,
+    &:focus {
+      border-color: #333333;
+    }
+  }
+
+  label {
+    @include font("sans");
+
+    &:not(:first-of-type) {
+      margin-top: 12px;
+    }
+  }
+
+  button {
+    padding: 4px 8px;
+    color: #eeeeee;
+    @include font("sans");
+    background: #3b3b3b;
+
+    &[type="submit"] {
+      margin-top: 20px;
+    }
+  }
+}
