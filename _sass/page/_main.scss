@@ -1,14 +1,3 @@
-[data-site-language="tr"] {
-  [data-display-lang="en"] {
-    display: none !important;
-  }
-}
-[data-site-language="en"] {
-  [data-display-lang="tr"] {
-    display: none !important;
-  }
-}
-
 .SiteContent {
   min-height: calc(100vh - 100px);
 }

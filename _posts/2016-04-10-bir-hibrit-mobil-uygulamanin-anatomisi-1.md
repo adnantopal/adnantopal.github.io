@@ -4,7 +4,8 @@ title: "Bir Hibrit Mobil Uygulamanın Anatomisi, Bölüm 1: Teknoloji"
 date: 2016-04-10 20:05:00 +0300
 excerpt: Bu yazı serisinde, hibrit mobil uygulama teknolojilerine merak salmam sonucunda ortaya çıkan ekşibişi adlı gayri resmi ekşisözlük uygulamasının geliştirme sürecinde edindiğim tecrübelerden bahsedeceğim. Serinin bu bölümü, hibrit mobil uygulama geliştirme teknolojilerinin tanıtımına ve işleyiş şekillerinin anlatılmasına dayalı olacak.
 categories: typography
-language: tr
+lang: tr
+ref: anatomy-of-a-hybrid-app
 ---
 Ellerimizden düşürmediğimiz mobil cihazlar artık hayatımızın ayrılmaz bir parçası ve hızla gelişmeye ve evrimleşmeye devam ediyorlar. Bu gelişimlerin birer meyvesi olan mobil bazlı bir çok başarılı internet start-up’ı da yoluna büyük miktarlarda yatırımlar alarak devam ediyor. Haliyle, mobil uygulama pazarı da bu sürece bağlı olarak sürekli olarak büyüme gösteriyor. Peki, mobil uygulama geliştirmesini sağlayacak programlama dillerine ve platform bazlı API’lere hakimiyeti bulunmayan biz arayüz geliştiricileri, -mükemmel bir fikrimiz olsun ya da olmasın- bu gelişmelerinden dışında mı kalıyoruz?
 

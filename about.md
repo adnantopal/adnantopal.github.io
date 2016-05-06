@@ -2,6 +2,8 @@
 layout: page
 title: About Me
 permalink: /about/
+lang: en
+ref: about
 ---
 
 #### My name is Adnan Topal. I'm a 27-year old front-end developer, focusing on **HTML**, **CSS** and **JavaScript**. Over the last few months I turned my attention to **hybrid mobile development** technologies and mostly concentrated on this area.

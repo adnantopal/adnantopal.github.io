@@ -1,6 +1,8 @@
 ---
 layout: default
 title: All Blog Posts
+lang: en
+ref: blog
 ---
 
 <section class="Post">
@@ -24,10 +26,6 @@ title: All Blog Posts
 <!-- /.Section.Page -->
 <section class="Section Writing">
     <div class="width">
-        <ul class="SelectLanguage">
-            <li><a href="#" data-active-lang="en">English</a></li>
-            <li><a href="#" data-active-lang="tr">Turkish</a></li>
-        </ul>
         {% for post in paginator.posts %}
         {% assign currentdate = post.date | date: "%Y" %}
         {% if currentdate != date %}
@@ -35,7 +33,7 @@ title: All Blog Posts
         <ul class="ArchiveList" data-archive-year="{{ currentdate }}">
             {% assign date = currentdate %}
             {% endif %}
-            <li class="Archive" data-display-lang="{{ post.language }}">
+            <li class="Archive">
                 <a class="Archive-link" href="{{ post.url }}">
                     <time class="Archive_date">{{post.date | date: "%b %-d"}}</time>
                     <h3 class="Archive_title">{{ post.title }}</h3>

@@ -4,7 +4,8 @@ title: "Example Typography"
 date: 2016-02-05 11:37:00 +0200
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit id massa quis auctor. Mauris porta vehicula massa, sit amet facilisis justo consectetur quis. Curabitur vel elementum risus. Proin facilisis rhoncus nisi vitae ullamcorper.
 categories: typography
-language: en
+lang: en
+ref: example-typography
 ---
 Anyone who has children understands that books are a crucial part of their development. Parents also know that children’s books are likely to have relatively short shelf lives; torn pages, chewed corners, and crazed crayoning conspire toward the book’s inevitable annihilation.
 
