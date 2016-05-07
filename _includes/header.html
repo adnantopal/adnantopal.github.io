@@ -15,4 +15,18 @@
         </ul>
     </nav>
 
+    <div class="SiteLanguage">
+        {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+        {% for mypost in posts %}
+        {% if mypost.url == page.url %}{% assign active = ' active' %}{% else %}{% assign active = '' %}{% endif %}
+        <a href="{{ mypost.url }}" class="lang-{{ mypost.lang }}{{ active }}">{{ mypost.lang }}</a>
+        {% endfor %}
+
+        {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+        {% for mypage in pages %}
+        {% if mypage.url == page.url %}{% assign active = ' active' %}{% else %}{% assign active = '' %}{% endif %}
+        <a href="{{ mypage.url }}" class="lang-{{ mypage.lang }}{{ active }}">{{ mypage.lang }}</a>
+        {% endfor %}
+    </div>
+
 </header>

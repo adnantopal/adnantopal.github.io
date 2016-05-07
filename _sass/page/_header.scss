@@ -148,7 +148,7 @@
         background: rgba(white, 0.75);
       }
 
-      @for $i from 1 through 10 {
+      @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
           transition-delay: #{$i * 0.1}s;
         }
@@ -176,12 +176,58 @@
         -webkit-transform: translate3d(0, 0, 0);
         transition: visibility 0.05s ease-in-out, opacity 0.25s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 
-        @for $i from 1 through 10 {
-          &:nth-child(#{$i}) {
-            transition-delay: #{$i * 0.1}s;
+        @for $i from 4*-1 through -1 {
+          &:nth-child(#{abs($i)}) {
+            transition-delay: #{($i + 5) * 0.1}s;
           }
         }
       }
+    }
+  }
+}
+
+.SiteLanguage {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  display: flex;
+  display: -webkit-flex;
+  padding: 5px 25px 5px;
+  @include font("serif", "normal");
+  font-size: 18px;
+  border-right: 1px #eeeeee solid;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+
+  .NavOpen & {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    line-height: 1;
+
+    &:not(:first-of-type) {
+      margin-left: 20px;
+
+      &:before {
+        content: '\2022';
+        position: absolute;
+        left: -12px;
+        top: 2px;
+        color: #aaa;
+        font-size: 14px;
+      }
+    }
+
+    &.active {
+      color: $theme-color;
     }
   }
 }
