@@ -23,17 +23,31 @@ twitter:
   username: adnantopal
 
 site_pages:
-  - title: "About"
-    url: "/about/"
+  en:
+    - title: "About"
+      url: "/about/"
 
-  - title: "Projects"
-    url: "/projects/"
+    - title: "Projects"
+      url: "/projects/"
 
-  - title: "Blog"
-    url: "/blog/"
+    - title: "Blog"
+      url: "/blog/"
 
-  - title: "Contact"
-    url: "/contact/"
+    - title: "Contact"
+      url: "/contact/"
+
+  tr:
+    - title: "Hakkımda"
+      url: "/hakkimda/"
+
+    - title: "Projeler"
+      url: "/projeler/"
+
+    - title: "Blog"
+      url: "/blog-tr/"
+
+    - title: "İletişim"
+      url: "/iletisim/"
 
 # Build settings
 kramdown:

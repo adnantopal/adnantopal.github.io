@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /anasayfa/
+permalink: /tr/
 lang: tr
 ref: index
 ---
@@ -55,9 +55,10 @@ ref: index
         <ul class="ArchiveList" data-archive-year="{{ currentdate }}">
             {% assign date = currentdate %}
             {% endif %}
+            {% include date.html date=post.date %}
             <li class="Archive">
                 <a class="Archive-link" href="{{ post.url }}">
-                    <time class="Archive_date">{{post.date | date: "%b %-d"}}</time>
+                    <time class="Archive_date">{{ day }} {{ month | slice: 0, 3 }}</time>
                     <h3 class="Archive_title">{{ post.title }}</h3>
                 </a>
             </li>

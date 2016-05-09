@@ -148,7 +148,7 @@
         background: rgba(white, 0.75);
       }
 
-      @for $i from 1 through 4 {
+      @for $i from 1 through $navigation-items {
         &:nth-child(#{$i}) {
           transition-delay: #{$i * 0.1}s;
         }
@@ -162,7 +162,7 @@
         transition: color 0.2s ease-in-out;
 
         &:hover {
-          color: #999999;
+          color: $theme-color;
           text-decoration: none;
         }
       }
@@ -176,9 +176,9 @@
         -webkit-transform: translate3d(0, 0, 0);
         transition: visibility 0.05s ease-in-out, opacity 0.25s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 
-        @for $i from 4*-1 through -1 {
+        @for $i from $navigation-items*-1 through -1 {
           &:nth-child(#{abs($i)}) {
-            transition-delay: #{($i + 5) * 0.1}s;
+            transition-delay: #{($i + ($navigation-items + 1)) * 0.1}s;
           }
         }
       }
@@ -199,13 +199,17 @@
   visibility: visible;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.6s;
+  transition-delay: #{($navigation-items + 1) * 0.1}s;
 
   .NavOpen & {
     visibility: hidden;
     opacity: 0;
     transition-duration: 0.2s;
     transition-delay: 0s;
+    @include device("phone") {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   a {

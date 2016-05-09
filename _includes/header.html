@@ -1,13 +1,13 @@
 <header class="SiteHeader" role="banner">
-
+    {% if page.lang == "en" %}{% assign home_permalink = '/' %}{% else %}{% assign home_permalink = '/tr/' %}{% endif %}
     <div class="SiteLogo">
-        <a href="{{ site.baseurl }}/" rel="home">adnan<span>.</span></a>
+        <a href="{{ home_permalink | prepend: site.baseurl }}" rel="home">adnan<span>.</span></a>
     </div>
 
     <nav class="SiteNavigation" role="navigation">
         <a class="NavToggle" href="#">-</a>
         <ul>
-            {% for my_page in site.site_pages %}
+            {% for my_page in site.site_pages[page.lang] %}
             {% if my_page.title %}
             <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
             {% endif %}

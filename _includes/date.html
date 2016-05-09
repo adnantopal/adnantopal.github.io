@@ -1,0 +1,47 @@
+{% capture hide %}
+
+{% if include.mode != 'month' %}
+
+    {% assign day = include.date | date: "%-d" %}
+
+{% endif %}
+
+{% if page.lang != 'tr' %}
+
+    {% capture month %}{{ include.date | date: "%B" }}{% endcapture %}
+
+{% else %}
+
+    {% assign m = include.date | date: "%-m" %}
+    {% case m %}
+    {% when '1' %}
+    {% capture month %}Ocak{% endcapture %}
+    {% when '2' %}
+    {% capture month %}Şubat{% endcapture %}
+    {% when '3' %}
+    {% capture month %}Mart{% endcapture %}
+    {% when '4' %}
+    {% capture month %}Nisan{% endcapture %}
+    {% when '5' %}
+    {% capture month %}Mayıs{% endcapture %}
+    {% when '6' %}
+    {% capture month %}Haziran{% endcapture %}
+    {% when '7' %}
+    {% capture month %}Temmuz{% endcapture %}
+    {% when '8' %}
+    {% capture month %}Ağustos{% endcapture %}
+    {% when '9' %}
+    {% capture month %}Eylül{% endcapture %}
+    {% when '10' %}
+    {% capture month %}Ekim{% endcapture %}
+    {% when '11' %}
+    {% capture month %}Kasım{% endcapture %}
+    {% when '12' %}
+    {% capture month %}Aralık{% endcapture %}
+    {% endcase %}
+
+{% endif %}
+
+{% capture year %}{{ include.date | date: "%Y" }}{% endcapture %}
+
+{% endcapture %}
