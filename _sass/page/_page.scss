@@ -20,7 +20,9 @@
     padding: 4px 8px;
     color: $color-text;
     background: #ffffff;
-    border: 1px solid #aaaaaa;
+    border: 2px solid #d4d4d4;
+    outline: 0;
+    transition: border-color 0.3s ease-in-out;
 
     &:active,
     &:focus {
