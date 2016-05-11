@@ -1,0 +1,22 @@
+---
+layout: page
+title: İletişim
+permalink: /iletisim/
+lang: tr
+ref: contact
+---
+
+<h4>Beraber çalışabileceğimizi düşünüyor veya bana bir e-posta göndermek istiyorsanız, formu doldurup <strong>Gönder!</strong> butonuna tıklamanız yeterli. En kısa sürede size geri dönüş yapmaya çalışacağım.</h4>
+
+<form class="ContactForm" action="https://formspree.io/adnan@atopal.com" method="post">
+    <label for="name">İsim</label>
+    <input id="name" name="name" type="text" required>
+    <label for="email">E-Posta</label>
+    <input id="email" name="_replyto" type="email" required>
+    <label for="subject">Başlık</label>
+    <input id="subject" name="_subject" type="text" required>
+    <label for="message">Mesaj</label>
+    <textarea name="message" id="message" cols="30" rows="4" required></textarea>
+    <input type="text" name="_gotcha" style="display:none">
+    <button type="submit">Gönder!</button>
+</form>

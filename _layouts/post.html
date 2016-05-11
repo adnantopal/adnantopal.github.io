@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body data-site-language="en">
+<body>
 {% include header.html %}
 {% include date.html date=page.date %}
 <main class="SiteContent" role="main">
@@ -12,13 +12,9 @@
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                     {% if page.lang == "en" %}{{ month }} {{ day }}, {{year}}{% else %}{{ day }} {{ month }} {{year}}{% endif %}
                 </time>
-                <span class="reading-time" title="Estimated read time">
+                <span class="reading-time" title="{{ site.data.translations[page.lang].read_time_desc }}">
                     {% assign words = content | number_of_words %}
-                    {% if words < 360 %}
-                    1 min read{% if page.lang == "en" %}{% else %}dakikada okunur{% endif %}
-                    {% else %}
-                    {{ words | divided_by:180 }} {% if page.lang == "en" %}mins read{% else %}dakikada okunur{% endif %}
-                    {% endif %}
+                    {{ words | divided_by:180 }} {{ site.data.translations[page.lang].read_time }}
                 </span>
             </section>
         </header>

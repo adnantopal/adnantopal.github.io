@@ -1,0 +1,14 @@
+{
+  "en": {
+    "home_permalink": "/",
+    "read_time": "min(s) read",
+    "read_time_desc": "Estimated read time",
+    "visit_project": "visit project"
+  },
+  "tr": {
+    "home_permalink": "/tr/",
+    "read_time": "dakikada okunur",
+    "read_time_desc": "Tahmini okuma süresi",
+    "visit_project": "proje detayı"
+  }
+}

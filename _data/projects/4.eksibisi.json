@@ -1,7 +1,16 @@
 {
-  "name": "ekşibişi",
-  "tagline": "Mobile Application",
-  "description": "ekşibişi is an unofficial application for ekşisözlük and built to give its users a smoother mobile experience because an official mobile application doesn't exist.",
-  "url": "http://eksibisi.com/",
-  "image": "eksibisi.png"
+  "en": {
+    "name": "ekşibişi",
+    "tagline": "Mobile Application",
+    "description": "ekşibişi is an unofficial application for ekşisözlük and built to give its users a smoother mobile experience because an official mobile application doesn't exist.",
+    "url": "http://eksibisi.com/",
+    "image": "eksibisi.png"
+  },
+  "tr": {
+    "name": "ekşibişi",
+    "tagline": "Mobil Uygulama",
+    "description": "ekşibişi, hobi olarak geliştirilmeye başladığım ve android kullanıcıları için ekşisözlük kullanımını kolaylaştırmayı hedefleyen bir mobil uygulamadır.",
+    "url": "http://eksibisi.com/",
+    "image": "eksibisi.png"
+  }
 }

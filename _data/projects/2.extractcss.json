@@ -1,7 +1,16 @@
 {
-  "name": "extractCSS",
-  "tagline": "JavaScript Library / Online Tool",
-  "description": "extractCSS is a JS library and hosted online tool that can extract id, class and inline styles from HTML document and output them as CSS stylesheet.",
-  "url": "https://github.com/adnantopal/extractcss",
-  "image": "extractcss.png"
+  "en": {
+    "name": "extractCSS",
+    "tagline": "JavaScript Library / Online Tool",
+    "description": "extractCSS is a JS library and hosted online tool that can extract id, class and inline styles from HTML document and output them as CSS stylesheet.",
+    "url": "https://github.com/adnantopal/extractcss",
+    "image": "extractcss.png"
+  },
+  "tr": {
+    "name": "extractCSS",
+    "tagline": "JavaScript Kütüphanesi / Çevrimiçi Araç",
+    "description": "extractCSS, bir HTML dökümanındaki id, class ve inline stilleri CSS dökümanı olarak aktarmaya yarayan bir JS kütüphanesi ve çevrimiçi araçtır.",
+    "url": "https://github.com/adnantopal/extractcss",
+    "image": "extractcss.png"
+  }
 }

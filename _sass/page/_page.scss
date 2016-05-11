@@ -26,11 +26,12 @@
 
     &:active,
     &:focus {
-      border-color: #333333;
+      border-color: #444;
     }
   }
 
   label {
+    color: #444444;
     @include font("sans");
 
     &:not(:first-of-type) {

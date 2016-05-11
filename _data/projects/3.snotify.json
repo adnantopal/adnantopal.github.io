@@ -1,7 +1,16 @@
 {
-  "name": "snotify",
-  "tagline": "Desktop Application",
-  "description": "SNotify gives your Spotify Windows Client two additional abilities: global hotkeys and toast notifications.",
-  "url": "https://github.com/adnantopal/snotify",
-  "image": "snotify.png"
+  "en": {
+    "name": "snotify",
+    "tagline": "Desktop Application",
+    "description": "SNotify gives your Spotify Windows Client two additional abilities: global hotkeys and toast notifications.",
+    "url": "https://github.com/adnantopal/snotify",
+    "image": "snotify.png"
+  },
+  "tr": {
+    "name": "snotify",
+    "tagline": "Masaüstü Uygulaması",
+    "description": "SNotify, Spotify Windows uygulamasına global tuş kombinasyonları ve bildirim gibi özellikler ekleyen bir ek uygulamadır.",
+    "url": "https://github.com/adnantopal/snotify",
+    "image": "snotify.png"
+  }
 }
