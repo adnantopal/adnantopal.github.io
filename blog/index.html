@@ -26,7 +26,8 @@ ref: blog
 <!-- /.Section.Page -->
 <section class="Section Writing">
     <div class="width">
-        {% for post in paginator.posts %}
+        {% assign paginator_posts=paginator.posts | where:"lang", page.lang %}
+        {% for post in paginator_posts %}
         {% assign currentdate = post.date | date: "%Y" %}
         {% if currentdate != date %}
         {% unless forloop.first %}</ul>{% endunless %}

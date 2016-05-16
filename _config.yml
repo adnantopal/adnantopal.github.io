@@ -31,7 +31,7 @@ site_pages:
       url: "/projects/"
 
     - title: "Blog"
-      url: "/blog/"
+      url: "/"
 
     - title: "Contact"
       url: "/contact/"
@@ -44,7 +44,7 @@ site_pages:
       url: "/projeler/"
 
     - title: "Blog"
-      url: "/blog-tr/"
+      url: "/tr/"
 
     - title: "İletişim"
       url: "/iletisim/"
