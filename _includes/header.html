@@ -22,13 +22,11 @@
         <a href="{{ mypost.url }}" class="lang-{{ mypost.lang }}{{ active }}">{{ mypost.lang }}</a>
         {% endfor %}
 
-        {% if page.ref != 'blog' %}
         {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
         {% for mypage in pages %}
         {% if mypage.url == page.url %}{% assign active = ' active' %}{% else %}{% assign active = '' %}{% endif %}
         <a href="{{ mypage.url }}" class="lang-{{ mypage.lang }}{{ active }}">{{ mypage.lang }}</a>
         {% endfor %}
-        {% endif %}
     </div>
 
 </header>

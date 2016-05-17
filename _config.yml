@@ -11,11 +11,11 @@ email: "adnan@adnan.co"
 description: "Adnan Topal Personal Site and Blog"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site
-paginate: 3
-paginate_path: "/blog/page-:num/"
+# paginate: 10
+# paginate_path: "/blog/page-:num/"
 
 twitter_username: adnantopal
-github_username:  adnantopal
+github_username: adnantopal
 disqus_username: adnantopal
 google_analytics:
 
@@ -30,8 +30,8 @@ site_pages:
     - title: "Projects"
       url: "/projects/"
 
-    - title: "Blog"
-      url: "/"
+    - title: "Articles"
+      url: "/articles/"
 
     - title: "Contact"
       url: "/contact/"
@@ -43,8 +43,8 @@ site_pages:
     - title: "Projeler"
       url: "/projeler/"
 
-    - title: "Blog"
-      url: "/tr/"
+    - title: "Yazılar"
+      url: "/yazilar/"
 
     - title: "İletişim"
       url: "/iletisim/"

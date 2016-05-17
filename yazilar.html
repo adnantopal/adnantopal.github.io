@@ -1,7 +1,8 @@
 ---
 layout: default
-title: All Blog Posts
-lang: en
+title: Yazdıklarım
+permalink: /yazilar/
+lang: tr
 ref: blog
 ---
 
@@ -10,12 +11,12 @@ ref: blog
     <div class="PostBody Blog">
 
         <section class="width">
-            <h1 class="page-title">Blog</h1>
+            <h1 class="page-title">Yazılar</h1>
         </section>
         <!-- /.width -->
 
         <section class="width">
-            <h4>It's great to share the experiences you've had while developing a project. Here I occasionally write blog posts about them.</h4>
+            <h4>Bir proje üzerinde çalışırken veya yeni bir teknolojiyi kurcalarken edindiğim tecrübeleri paylaşmak ve bilginin aktarılmasını sağlamak amacıyla yazdıklarım.</h4>
         </section>
         <!-- /.width -->
 
@@ -26,8 +27,8 @@ ref: blog
 <!-- /.Section.Page -->
 <section class="Section Writing">
     <div class="width">
-        {% assign paginator_posts=paginator.posts | where:"lang", page.lang %}
-        {% for post in paginator_posts %}
+        {% assign posts=site.posts | where:"lang", page.lang %}
+        {% for post in posts %}
         {% assign currentdate = post.date | date: "%Y" %}
         {% if currentdate != date %}
         {% unless forloop.first %}</ul>{% endunless %}
@@ -40,7 +41,7 @@ ref: blog
                     <h3 class="Archive_title">{{ post.title }}</h3>
                 </a>
                 {% if post.excerpt %}
-                <p>{{ post.excerpt }}</p>
+                <p>{{ post.excerpt | truncate: 180 }}</p>
                 {% endif %}
             </li>
             {% if forloop.last %}
@@ -50,20 +51,3 @@ ref: blog
     </div>
 </section>
 <!-- /.Section.Writing -->
-
-<section class="Pagination">
-    <div class="width">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-        {% else %}
-        <span class="previous">Previous</span>
-        {% endif %}
-        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-        {% else %}
-        <span class="next ">Next</span>
-        {% endif %}
-    </div>
-</section>
-<!-- Pagination links -->
