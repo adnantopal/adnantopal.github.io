@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Anatomy of a Hybrid Mobile Application, Part 1: Technology"
+title: "The Anatomy of a Hybrid Mobile Application, Part 1: Technology"
 date: 2016-04-10 20:05:00 +0300
 excerpt: In this series, I will write about the experiences I had in the development process of <strong>eksibisi</strong>, an unofficial Android app for eksisozluk (the biggest Turkish social media platform), which's emerged as a result of my ever-growing interest in hybrid mobile application development technologies. First part of the series will be about the technologies used in the development of the application and how these technologies work.
 categories: typography
 lang: en
 ref: anatomy-of-a-hybrid-app
 ---
-Ellerimizden düşürmediğimiz mobil cihazlar artık hayatımızın ayrılmaz bir parçası ve hızla gelişmeye ve evrimleşmeye devam ediyorlar. Bu gelişimlerin birer meyvesi olan mobil bazlı bir çok başarılı internet start-up’ı da yoluna büyük miktarlarda yatırımlar alarak devam ediyor. Haliyle, mobil uygulama pazarı da bu sürece bağlı olarak sürekli olarak büyüme gösteriyor. Peki, mobil uygulama geliştirmesini sağlayacak programlama dillerine ve platform bazlı API’lere hakimiyeti bulunmayan biz arayüz geliştiricileri, -mükemmel bir fikrimiz olsun ya da olmasın- bu gelişmelerinden dışında mı kalıyoruz?
+Mobile devices are now an inseparable part of our daily lives and mobile ecosystems are constantly evolving as a result to supply the demands of mobile users. As a web developer, there are several ways to adapt our work to mobile users' needs and make life easier for them. However, lacking the knowledge of languages to develop mobile applications, are we being left out of this ecosystem as a developer and stay only as a user?
 
 ## Cordova
 Sorunun cevabı hayır. Ve tam bu noktada araya Adobe şirketinin sahibi olduğu [PhoneGap](http://phonegap.com/) framework’ünün, Apache Foundation’a bağışlanarak açık kaynaklı hale getirilen hali olan [Cordova](http://cordova.apache.org/) giriyor. Cordova’nın çalışma prensibi, sağladığı JavaScript API’leri sayesinde, iOS, Android gibi platformların native özelliklerine erişim imkanı edindiğimiz HTML, CSS ve JavaScript’ten oluşan web uygulamalarının, yine bu platformların bir parçası olan WebView bileşeninin içinde gösterilmesinden oluşuyor. Daha basit bir dille anlatırsak: aslında yapılan uygulamalar, çeşitli UI elementlerini kullanan native uygulamalar olmak yerine, cihazların native işlevlerine erişim imkanı olan ve tek bir UI elementi (WebView) içinde, mobil bir tarayıcıdaymış gibi çalışan birer web uygulaması oluyor.
